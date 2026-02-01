@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toma & Afridi Story 💕</title>
+<style>
+:root {
+--primary-pink: #ff6b8b;
+--soft-pink: #ffebee;
+--dark-pink: #d81b60;
+--gold: #ffd700;
+--white: #ffffff;
+--shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+--radius: 16px;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+background: linear-gradient(135deg, var(--soft-pink) 0%, #fff5f7 100%);
+color: #333;
+min-height: 100vh;
+padding-bottom: 70px;
+}
+
+/* লক স্ক্রীন */
+.lock-screen {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(135deg, var(--dark-pink) 0%, var(--primary-pink) 100%);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+}
+
+.lock-container {
+background: rgba(255, 255, 255, 0.95);
+padding: 40px;
+border-radius: var(--radius);
+text-align: center;
+width: 90%;
+max-width: 400px;
+box-shadow: var(--shadow);
+}
+
+.islamic-bismillah {
+font-size: 28px;
+color: var(--dark-pink);
+margin-bottom: 20px;
+font-weight: bold;
+}
+
+.pin-input-container {
+display: flex;
+gap: 10px;
+margin: 30px 0;
+}
+
+#pinInput {
+flex: 1;
+padding: 15px;
+border: 2px solid var(--soft-pink);
+border-radius: 10px;
+font-size: 18px;
+text-align: center;
+letter-spacing: 5px;
+}
+
+.pin-input-container button {
+background: var(--gold);
+color: #333;
+border: none;
+padding: 0 25px;
+border-radius: 10px;
+font-size: 16px;
+cursor: pointer;
+transition: all 0.3s;
+}
+
+/* নেভিবার */
+.navbar {
+background: var(--white);
+padding: 15px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: var(--shadow);
+border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.logo {
+font-size: 32px;
+animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+0%, 100% { transform: scale(1); }
+50% { transform: scale(1.1); }
+}
+
+/* স্ট্যাটস */
+.stats-container {
+display: flex;
+justify-content: center;
+gap: 20px;
+margin: 30px 0;
+flex-wrap: wrap;
+}
+
+.stat-box {
+background: var(--white);
+padding: 20px;
+border-radius: var(--radius);
+box-shadow: var(--shadow);
+display: flex;
+align-items: center;
+gap: 15px;
+min-width: 200px;
+}
+
+/* ফিচার কার্ড */
+.features-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+padding: 20px;
+}
+
+.feature-card {
+background: var(--white);
+padding: 25px;
+border-radius: var(--radius);
+box-shadow: var(--shadow);
+text-decoration: none;
+color: #333;
+transition: transform 0.3s;
+display: block;
+border-left: 5px solid var(--primary-pink);
+}
+
+.feature-card:hover {
+transform: translateY(-5px);
+border-left-color: var(--gold);
+}
+
+/* বটম নেভ */
+.bottom-nav {
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+background: var(--white);
+display: flex;
+justify-content: space-around;
+padding: 15px 0;
+box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-item {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-decoration: none;
+color: #888;
+font-size: 12px;
+}
+
+.nav-item.active {
+color: var(--dark-pink);
+}
+
+/* ইসলামিক সেকশন */
+.islamic-section {
+background: linear-gradient(135deg, #f9f5ff 0%, #fff 100%);
+margin: 30px 20px;
+padding: 25px;
+border-radius: var(--radius);
+border: 1px solid #e1bee7;
+}
+
+.dua-text {
+font-size: 20px;
+color: #4a148c;
+text-align: center;
+line-height: 1.8;
+margin-bottom: 15px;
+font-weight: 500;
+}
+
+/* ডায়েরি স্টাইল */
+.diary-container {
+padding: 20px;
+}
+
+.diary-form {
+background: var(--white);
+padding: 25px;
+border-radius: var(--radius);
+box-shadow: var(--shadow);
+margin-bottom: 30px;
+}
+
+textarea {
+width: 100%;
+padding: 15px;
+border: 2px solid var(--soft-pink);
+border-radius: 10px;
+min-height: 150px;
+font-size: 16px;
+margin: 15px 0;
+}
+
+/* রেস্পন্সিভ */
+@media (max-width: 768px) {
+.features-grid {
+grid-template-columns: 1fr;
+}
+.stat-box {
+width: 100%;
+}
+}
+</style>
+</head>
+<body>
+<!-- লক স্ক্রীন -->
+<div id="lockScreen" class="lock-screen">
+<div class="lock-container">
+<div class="islamic-bismillah">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
+<h2><i class="icon">🔒</i> আমাদের গোপন জগৎ</h2>
+<p class="sub-text">শুধু Toma & Afridi-এর জন্য</p>
+
+<div class="pin-input-container">
+<input type="password" id="pinInput" maxlength="6" placeholder="৬ ডিজিট PIN দিন" value="123456">
+<button onclick="checkPIN()"><i class="icon">🔓</i> খুলুন</button>
+</div>
+
+<div class="privacy-notice">
+<i class="icon">🛡️</i> এটি সম্পূর্ণ ব্যক্তিগত - কোনো তথ্য ক্লাউডে সংরক্ষিত হয় না
+</div>
+</div>
+</div>
+
+<!-- মূল অ্যাপ -->
+<div id="appContent" class="app-content" style="display:none;">
+<!-- নেভিবার -->
+<nav class="navbar">
+<div class="nav-brand">
+<div class="logo">💞</div>
+<div>
+<h1>Toma & Afridi</h1>
+<p class="tagline">Our Story, Our World</p>
+</div>
+</div>
+<div class="nav-date" id="currentDate">২৫ মার্চ, ২০২৪</div>
+</nav>
+
+<!-- হোম কন্টেন্ট -->
+<main class="main-content">
+<header class="hero-section" style="padding: 30px 20px;">
+<div class="welcome-text">
+<h2>স্বাগতম আমাদের গোপন জগতে</h2>
+<p class="quote">"এই গল্পটা শুধু আমাদের দুজনের জন্য" ❤️</p>
+</div>
+
+<div class="stats-container">
+<div class="stat-box">
+<div class="stat-icon">💖</div>
+<div class="stat-info">
+<h3 id="daysTogether">456</h3>
+<p>দিন একসাথে</p>
+</div>
+</div>
+
+<div class="stat-box">
+<div class="stat-icon">📅</div>
+<div class="stat-info">
+<h3 id="todayDate">২৫ মার্চ, ২০২৪</h3>
+<p>আজকের তারিখ</p>
+</div>
+</div>
+</div>
+
+<div class="love-quote-box" style="background: white; padding: 20px; border-radius: 15px; margin: 20px;">
+<p id="randomLoveQuote">তোমার সাথে প্রতিটি মুহূর্তই বিশেষ 💕</p>
+<button onclick="newQuote()" style="background: var(--primary-pink); color: white; border: none; padding: 8px 15px; border-radius: 20px; margin-top: 10px;">
+🔄 নতুন উক্তি
+</button>
+</div>
+</header>
+
+<!-- ফিচার গ্রিড -->
+<section class="features-grid">
+<div onclick="showPage('diary')" class="feature-card" style="cursor: pointer;">
+<div style="font-size: 40px; margin-bottom: 15px;">📖</div>
+<h3>আজকের অনুভূতি</h3>
+<p>দিনলিপি লিখুন, ইমোজি যোগ করুন</p>
+<span style="background: var(--soft-pink); padding: 5px 10px; border-radius: 10px; font-size: 12px; color: var(--dark-pink);">
+শুধু তোমরা দুজন দেখতে পারবেন
+</span>
+</div>
+
+<div onclick="showPage('gallery')" class="feature-card" style="cursor: pointer;">
+<div style="font-size: 40px; margin-bottom: 15px;">🖼️</div>
+<h3>আমাদের মুহূর্ত</h3>
+<p>ছবি আপলোড, স্মৃতি সংরক্ষণ</p>
+<span style="background: var(--soft-pink); padding: 5px 10px; border-radius: 10px; font-size: 12px; color: var(--dark-pink);">
+"এই দিনটা ভুলবো না"
+</span>
+</div>
+
+<div onclick="showPage('future')" class="feature-card" style="cursor: pointer;">
+<div style="font-size: 40px; margin-bottom: 15px;">✉️</div>
+<h3>আগাম ভালোবাসা</h3>
+<p>আজ লিখুন, ভবিষ্যতে খুলুন</p>
+<span style="background: var(--soft-pink); padding: 5px 10px; border-radius: 10px; font-size: 12px; color: var(--dark-pink);">
+বিশেষ দিনের জন্য মেসেজ
+</span>
+</div>
+
+<div onclick="showPage('settings')" class="feature-card" style="cursor: pointer;">
+<div style="font-size: 40px; margin-bottom: 15px;">⚙️</div>
+<h3>গোপনীয়তা</h3>
+<p>PIN পরিবর্তন, ব্যাকআপ</p>
+<span style="background: var(--soft-pink); padding: 5px 10px; border-radius: 10px; font-size: 12px; color: var(--dark-pink);">
+🔐 সম্পূর্ণ নিরাপদ
+</span>
+</div>
+</section>
+
+<!-- ইসলামিক সেকশন -->
+<section class="islamic-section">
+<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+<div style="font-size: 24px;">🌙</div>
+<h3>আমাদের দোয়া</h3>
+</div>
+<div class="dua-text">
+"রব্বানা হাবলানা মিন আযওয়াজিনা ওয়া জুররিয়্যাতিনা কুররাতা আ'ইউনিওন ওয়াজ'আলনা লিল মুত্তাকীনা ইমামা"
+</div>
+<p style="color: #666; font-size: 14px; text-align: center; line-height: 1.6; font-style: italic;">
+"হে আমাদের রব! আমাদেরকে আমাদের স্ত্রী ও সন্তান-সন্ততির পক্ষ থেকে চোখের শীতলতা দান করুন এবং আমাদেরকে মুত্তাকীদের জন্য নেতা বানিয়ে দিন।"
+</p>
+</section>
+
+<!-- ডায়েরি সেকশন (হিডেন) -->
+<div id="diaryPage" class="page" style="display: none;">
+<div class="diary-container">
+<div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+<button onclick="showPage('home')" style="background: none; border: none; font-size: 24px; cursor: pointer;">⬅️</button>
+<h2>📖 আজকের অনুভূতি</h2>
+</div>
+
+<div class="diary-form">
+<div class="form-header">
+<h3>নতুন এন্ট্রি লিখুন:</h3>
+<div style="margin: 10px 0;">
+<label>তারিখ:</label>
+<input type="date" id="entryDate" style="padding: 8px; border: 2px solid var(--soft-pink); border-radius: 8px; margin-left: 10px;">
+</div>
+</div>
+
+<div style="margin: 15px 0;">
+<p>অনুভূতি নির্বাচন করুন:</p>
+<div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
+<button onclick="selectEmoji('😍')" style="background: var(--soft-pink); border: none; padding: 8px 15px; border-radius: 20px; cursor: pointer;">😍</button>
+<button onclick="selectEmoji('🥰')" style="background: var(--soft-pink); border: none; padding: 8px 15px; border-radius: 20px; cursor: pointer;">🥰</button>
+<button onclick="selectEmoji('🥹')" style="background: var(--soft-pink); border: none; padding: 8px 15px; border-radius: 20px; cursor: pointer;">🥹</button>
+<button onclick="selectEmoji('😊')" style="background: var(--soft-pink); border: none; padding: 8px 15px; border-radius: 20px; cursor: pointer;">😊</button>
+<button onclick="selectEmoji('❤️')" style="background: var(--soft-pink); border: none; padding: 8px 15px; border-radius: 20px; cursor: pointer;">❤️</button>
+</div>
+</div>
+
+<textarea id="diaryText" placeholder="আজ কেমন কাটলো? তোমার অনুভূতি শেয়ার করো..."></textarea>
+
+<div style="display: flex; gap: 10px;">
+<button onclick="saveDiary()" style="background: var(--primary-pink); color: white; border: none; padding: 12px 25px; border-radius: 10px; cursor: pointer; flex: 1;">
+💾 সংরক্ষণ করুন
+</button>
+<button onclick="clearDiary()" style="background: #666; color: white; border: none; padding: 12px 25px; border-radius: 10px; cursor: pointer;">
+🗑️ ক্লিয়ার
+</button>
+</div>
+</div>
+
+<!-- ডায়েরি লিস্ট -->
+<div id="diaryList" style="margin-top: 30px;">
+<h3>আপনার ডায়েরি এন্ট্রি:</h3>
+<div id="entriesContainer" style="margin-top: 15px;"></div>
+</div>
+</div>
+</div>
+
+<!-- গ্যালারি সেকশন -->
+<div id="galleryPage" class="page" style="display: none;">
+<div style="padding: 20px;">
+<div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+<button onclick="showPage('home')" style="background: none; border: none; font-size: 24px; cursor: pointer;">⬅️</button>
+<h2>🖼️ আমাদের মুহূর্ত</h2>
+</div>
+
+<div style="background: white; padding: 20px; border-radius: 15px; margin-bottom: 20px;">
+<h3>নতুন ছবি যোগ করুন:</h3>
+<input type="file" id="imageUpload" accept="image/*" style="margin: 15px 0;">
+<input type="text" id="imageCaption" placeholder="ছবির ক্যাপশন..." style="width: 100%; padding: 10px; margin-bottom: 15px; border: 2px solid var(--soft-pink); border-radius: 8px;">
+<button onclick="uploadImage()" style="background: var(--primary-pink); color: white; border: none; padding: 12px 25px; border-radius: 10px; cursor: pointer;">
+📤 আপলোড করুন
+</button>
+</div>
+
+<div id="galleryContainer">
+<h3>আপনার ছবি সমূহ:</h3>
+<div id="imagesContainer" style="margin-top: 15px;"></div>
+</div>
+</div>
+</div>
+
+<!-- সেটিংস সেকশন -->
+<div id="settingsPage" class="page" style="display: none;">
+<div style="padding: 20px;">
+<div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+<button onclick="showPage('home')" style="background: none; border: none; font-size: 24px; cursor: pointer;">⬅️</button>
+<h2>⚙️ সেটিংস</h2>
+</div>
+
+<div style="background: white; padding: 20px; border-radius: 15px; margin-bottom: 20px;">
+<h3>PIN পরিবর্তন:</h3>
+<div style="margin: 15px 0;">
+<input type="password" id="currentPIN" placeholder="বর্তমান PIN" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 2px solid var(--soft-pink); border-radius: 8px;">
+<input type="password" id="newPIN" placeholder="নতুন PIN" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 2px solid var(--soft-pink); border-radius: 8px;">
+<input type="password" id="confirmPIN" placeholder="PIN নিশ্চিত করুন" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 2px solid var(--soft-pink); border-radius: 8px;">
+<button onclick="changePIN()" style="background: var(--primary-pink); color: white; border: none; padding: 12px 25px; border-radius: 10px; cursor: pointer;">
+🔐 PIN পরিবর্তন করুন
+</button>
+</div>
+</div>
+
+<div style="background: white; padding: 20px; border-radius: 15px; margin-bottom: 20px;">
+<h3>ডেটা ম্যানেজমেন্ট:</h3>
+<div style="margin: 15px 0;">
+<button onclick="exportData()" style="background: #4CAF50; color: white; border: none; padding: 12px 25px; border-radius: 10px; cursor: pointer; margin-right: 10px;">
+📥 ডেটা এক্সপোর্ট
+</button>
+<button onclick="importData()" style="background: #2196F3; color: white; border: none; padding: 12px 25px; border-radius: 10px; cursor: pointer;">
+📤 ডেটা ইমপোর্ট
+</button>
+<button onclick="clearAllData()" style="background: #f44336; color: white; border: none; padding: 12px 25px; border-radius: 10px; cursor: pointer; margin-top: 10px;">
+🗑️ সব ডেটা মুছুন
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+<!-- বটম নেভ -->
+<div class="bottom-nav">
+<a href="#" onclick="showPage('home')" class="nav-item active">
+<div style="font-size: 20px;">🏠</div>
+<span>হোম</span>
+</a>
+<a href="#" onclick="showPage('diary')" class="nav-item">
+<div style="font-size: 20px;">📖</div>
+<span>ডায়েরি</span>
+</a>
+<a href="#" onclick="showPage('gallery')" class="nav-item">
+<div style="font-size: 20px;">🖼️</div>
+<span>গ্যালারি</span>
+</a>
+<a href="#" onclick="showPage('settings')" class="nav-item">
+<div style="font-size: 20px;">⚙️</div>
+<span>সেটিংস</span>
+</a>
+</div>
+</div>
+
+<script>
+// অ্যাপ ডেটা
+let diaryEntries = [];
+let galleryImages = [];
+let selectedEmoji = '😊';
+
+// PIN চেক
+function checkPIN() {
+const pinInput = document.getElementById('pinInput');
+const enteredPIN = pinInput.value;
+const storedPIN = localStorage.getItem('tomaAfridiPIN') || '123456';
+
+if(enteredPIN === storedPIN) {
+document.getElementById('lockScreen').style.display = 'none';
+document.getElementById('appContent').style.display = 'block';
+loadAppData();
+updateDate();
+} else {
+alert("❌ ভুল PIN! আবার চেষ্টা করুন।");
+pinInput.value = '';
+pinInput.focus();
+}
+}
+
+// পেজ শো
+function showPage(page) {
+// সব পেজ হাইড
+document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+
+// নির্বাচিত পেজ শো
+if(page === 'home') {
+document.querySelector('.hero-section').style.display = 'block';
+document.querySelector('.features-grid').style.display = 'grid';
+document.querySelector('.islamic-section').style.display = 'block';
+} else {
+document.getElementById(page + 'Page').style.display = 'block';
+document.querySelector('.hero-section').style.display = 'none';
+document.querySelector('.features-grid').style.display = 'none';
+document.querySelector('.islamic-section').style.display = 'none';
+
+// স্পেসিফিক পেজ লোড
+if(page === 'diary') {
+loadDiaryEntries();
+} else if(page === 'gallery') {
+loadGalleryImages();
+}
+}
+
+// নেভ আপডেট
+document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+document.querySelectorAll('.nav-item').forEach(item => {
+if(item.querySelector('span').textContent ===
+(page === 'home' ? 'হোম' :
+page === 'diary' ? 'ডায়েরি' :
+page === 'gallery' ? 'গ্যালারি' : 'সেটিংস')) {
+item.classList.add('active');
+}
+});
+}
+
+// ডেটা লোড
+function loadAppData() {
+// ডায়েরি লোড
+const savedDiary = localStorage.getItem('tomaAfridiDiary');
+if(savedDiary) {
+diaryEntries = JSON.parse(savedDiary);
+}
+
+// গ্যালারি লোড
+const savedGallery = localStorage.getItem('tomaAfridiGallery');
+if(savedGallery) {
+galleryImages = JSON.parse(savedGallery);
+}
+
+// তারিখ সেট
+document.getElementById('entryDate').value = new Date().toISOString().split('T')[0];
+}
+
+// তারিখ আপডেট
+function updateDate() {
+const today = new Date();
+const options = { year: 'numeric', month: 'long', day: 'numeric' };
+const todayString = today.toLocaleDateString('bn-BD', options);
+document.getElementById('currentDate').textContent = todayString;
+document.getElementById('todayDate').textContent = todayString;
+
+// দিন গণনা
+const startDate = new Date('2023-01-01');
+const daysTogether = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+document.getElementById('daysTogether').textContent = daysTogether;
+}
+
+// ইমোজি সিলেক্ট
+function selectEmoji(emoji) {
+selectedEmoji = emoji;
+alert('ইমোজি সিলেক্ট হয়েছে: ' + emoji);
+}
+
+// ডায়েরি সেভ
+function saveDiary() {
+const date = document.getElementById('entryDate').value;
+const text = document.getElementById('diaryText').value;
+
+if(!date || !text.trim()) {
+alert("তারিখ এবং কিছু লেখা আবশ্যক!");
+return;
+}
+
+const entry = {
+id: Date.now(),
+date: date,
+text: text,
+emoji: selectedEmoji,
+timestamp: new Date().toISOString()
+};
+
+diaryEntries.unshift(entry);
+localStorage.setItem('tomaAfridiDiary', JSON.stringify(diaryEntries));
+
+alert("✅ ডায়েরি সংরক্ষিত হয়েছে!");
+document.getElementById('diaryText').value = '';
+loadDiaryEntries();
+}
+
+// ডায়েরি লোড
+function loadDiaryEntries() {
+const container = document.getElementById('entriesContainer');
+
+if(diaryEntries.length === 0) {
+container.innerHTML = '<p style="color: #666; text-align: center; padding: 20px;">এখনো কোনো এন্ট্রি নেই। প্রথম এন্ট্রি লিখুন!</p>';
+return;
+}
+
+let html = '';
+diaryEntries.forEach(entry => {
+const entryDate = new Date(entry.date).toLocaleDateString('bn-BD', {
+year: 'numeric',
+month: 'long',
+day: 'numeric'
+});
+
+html += `
+<div style="background: white; padding: 15px; border-radius: 10px; margin-bottom: 15px; border-left: 5px solid var(--primary-pink);">
+<div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+<span style="font-size: 24px;">${entry.emoji}</span>
+<span style="color: #666; font-size: 14px;">${entryDate}</span>
+</div>
+<p style="line-height: 1.6;">${entry.text}</p>
+<button onclick="deleteEntry(${entry.id})" style="background: #f44336; color: white; border: none; padding: 5px 15px; border-radius: 5px; cursor: pointer; margin-top: 10px;">
+🗑️ মুছুন
+</button>
+</div>
+`;
+});
+
+container.innerHTML = html;
+}
+
+// এন্ট্রি ডিলিট
+function deleteEntry(id) {
+if(confirm("আপনি কি এই এন্ট্রি মুছতে চান?")) {
+diaryEntries = diaryEntries.filter(entry => entry.id !== id);
+localStorage.setItem('tomaAfridiDiary', JSON.stringify(diaryEntries));
+loadDiaryEntries();
+}
+}
+
+// ডায়েরি ক্লিয়ার
+function clearDiary() {
+document.getElementById('diaryText').value = '';
+document.getElementById('entryDate').value = new Date().toISOString().split('T')[0];
+}
+
+// ছবি আপলোড
+function uploadImage() {
+const input = document.getElementById('imageUpload');
+const caption = document.getElementById('imageCaption').value;
+
+if(!input.files[0]) {
+alert("ছবি সিলেক্ট করুন!");
+return;
+}
+
+const reader = new FileReader();
+reader.onload = function(e) {
+const image = {
+id: Date.now(),
+url: e.target.result,
+caption: caption || "কোনো ক্যাপশন নেই",
+date: new Date().toISOString()
+};
+
+galleryImages.unshift(image);
+localStorage.setItem('tomaAfridiGallery', JSON.stringify(galleryImages));
+
+alert("✅ ছবি সংরক্ষিত হয়েছে!");
+document.getElementById('imageCaption').value = '';
+input.value = '';
+loadGalleryImages();
+};
+
+reader.readAsDataURL(input.files[0]);
+}
+
+// গ্যালারি লোড
+function loadGalleryImages() {
+const container = document.getElementById('imagesContainer');
+
+if(galleryImages.length === 0) {
+container.innerHTML = '<p style="color: #666; text-align: center; padding: 20px;">এখনো কোনো ছবি নেই। প্রথম ছবি আপলোড করুন!</p>';
+return;
+}
+
+let html = '<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px;">';
+
+galleryImages.forEach(image => {
+const imageDate = new Date(image.date).toLocaleDateString('bn-BD', {
+year: 'numeric',
+month: 'long',
+day: 'numeric'
+});
+
+html += `
+<div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+<img src="${image.url}" alt="${image.caption}" style="width: 100%; height: 150px; object-fit: cover;">
+<div style="padding: 10px;">
+<p style="font-size: 12px; color: #666; margin-bottom: 5px;">${imageDate}</p>
+<p style="font-size: 14px;">${image.caption}</p>
+<button onclick="deleteImage(${image.id})" style="background: #f44336; color: white; border: none; padding: 3px 10px; border-radius: 5px; cursor: pointer; font-size: 12px; margin-top: 5px;">
+মুছুন
+</button>
+</div>
+</div>
+`;
+});
+
+html += '</div>';
+container.innerHTML = html;
+}
+
+// ছবি ডিলিট
+function deleteImage(id) {
+if(confirm("আপনি কি এই ছবি মুছতে চান?")) {
+galleryImages = galleryImages.filter(img => img.id !== id);
+localStorage.setItem('tomaAfridiGallery', JSON.stringify(galleryImages));
+loadGalleryImages();
+}
+}
+
+// PIN পরিবর্তন
+function changePIN() {
+const currentPIN = document.getElementById('currentPIN').value;
+const newPIN = document.getElementById('newPIN').value;
+const confirmPIN = document.getElementById('confirmPIN').value;
+const storedPIN = localStorage.getItem('tomaAfridiPIN') || '123456';
+
+if(currentPIN !== storedPIN) {
+alert("বর্তমান PIN ভুল!");
+return;
+}
+
+if(newPIN.length !== 6) {
+alert("PIN ৬ ডিজিট হতে হবে!");
+return;
+}
+
+if(newPIN !== confirmPIN) {
+alert("নতুন PIN মিলছে না!");
+return;
+}
+
+localStorage.setItem('tomaAfridiPIN', newPIN);
+alert("✅ PIN পরিবর্তন করা হয়েছে!");
+
+document.getElementById('currentPIN').value = '';
+document.getElementById('newPIN').value = '';
+document.getElementById('confirmPIN').value = '';
+}
+
+// ডেটা এক্সপোর্ট
+function exportData() {
+const allData = {
+diary: diaryEntries,
+gallery: galleryImages,
+exportDate: new Date().toISOString()
+};
+
+const dataStr = JSON.stringify(allData, null, 2);
+const blob = new Blob([dataStr], { type: 'application/json' });
+const url = URL.createObjectURL(blob);
+
+const a = document.createElement('a');
+a.href = url;
+a.download = `toma-afridi-backup-${new Date().getTime()}.json`;
+document.body.appendChild(a);
+a.click();
+document.body.removeChild(a);
+
+alert("✅ ডেটা এক্সপোর্ট করা হয়েছে!");
+}
+
+// ডেটা ইমপোর্ট
+function importData() {
+alert("এই ফিচারটি ডেমোতে অ্যাভেইলেবল নয়। ফুল ভার্সনে থাকবে।");
+}
+
+// সব ডেটা মুছুন
+function clearAllData() {
+if(confirm("⚠️ আপনি কি সব ডেটা মুছতে চান? এটি রিভার্স করা যাবে না!")) {
+localStorage.clear();
+diaryEntries = [];
+galleryImages = [];
+
+alert("✅ সব ডেটা মুছে ফেলা হয়েছে!");
+location.reload();
+}
+}
+
+// র‍্যান্ডম উক্তি
+const loveQuotes = [
+"তোমার সাথে প্রতিটি মুহূর্তই বিশেষ 💕",
+"ভালোবাসা কোনো শব্দ নয়, একটি অনুভূতি ❤️",
+"তুমি আমার জীবনের সবচেয়ে সুন্দর অধ্যায় 📖",
+"চোখে চোখ রাখলেই বুঝি, ভাষার দরকার পড়ে না 👁️👁️",
+"তোমাকে ভালোবাসি বলে সবকিছু সুন্দর লাগে 🌸",
+"প্রতিটি দিনই আমাদের ভালোবাসার গল্প লেখে ✍️",
+"তুমি আমার আজ, আমার আগামীকাল, আমার সব সময় ⏳",
+"ভালোবাসা মানে শুধু একসাথে থাকা নয়, একসাথে বড় হওয়া 🌱"
+];
+
+function newQuote() {
+const randomIndex = Math.floor(Math.random() * loveQuotes.length);
+document.getElementById('randomLoveQuote').textContent = loveQuotes[randomIndex];
+}
+
+// অটো লগইন চেক
+window.onload = function() {
+const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+
+if(isLoggedIn === 'true') {
+document.getElementById('lockScreen').style.display = 'none';
+document.getElementById('appContent').style.display = 'block';
+loadAppData();
+updateDate();
+}
+
+// তারিখ সেট
+document.getElementById('entryDate').value = new Date().toISOString().split('T')[0];
+
+// Enter key for PIN
+document.getElementById('pinInput').addEventListener('keypress', function(e) {
+if(e.key === 'Enter') {
+checkPIN();
+}
+});
+
+// সেশন ম্যানেজমেন্ট
+window.addEventListener('beforeunload', function() {
+sessionStorage.setItem('isLoggedIn', 'true');
+});
+};
+
+// ইনিশিয়াল র‍্যান্ডম উক্তি
+newQuote();
+</script>
+</body>
+</html>
